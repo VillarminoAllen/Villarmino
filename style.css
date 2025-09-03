@@ -27,12 +27,13 @@
 }
 
 .menu{
-    width: 600px;
+    width: 1000px;
     float: left;
     height: 70px;
 }
 
 ul{
+    width: 850px;
     float: left;
     display: flex;
     padding-top: 30px;
@@ -52,5 +53,27 @@ ul li a{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    transition: .3s ease;
 }
 
+ul li a:hover{
+    color: crimson;
+}
+
+.title{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.title h2{
+    text-align: center;
+
+}
