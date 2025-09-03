@@ -23,10 +23,49 @@
          </div>
          <div class="title">
           <h1>Allen Glenn B. Villarmino</h1>
-          <h2>I am Allen Glenn</h2>
+          <h2>Aspiring to be a<span id="typing-text"></span></h2>
          
          </div>
      </div>
+      
+    <script>
+      const textElement = document.getElementById('typing-text');
+      const textArray = [" Web Developer", " Web Designer"]; 
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function typeWriter() {
+        const currentText = textArray[textIndex];
+
+        // Typing phase
+        if (!isDeleting && charIndex < currentText.length) {
+          textElement.textContent += currentText.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, 100); // Typing speed
+        } 
+        // Deleting phase
+        else if (isDeleting && charIndex > 0) {
+          textElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(typeWriter, 50); // Deleting speed
+        }
+        // Switch to deleting
+        else if (!isDeleting && charIndex === currentText.length) {
+          isDeleting = true;
+          setTimeout(typeWriter, 1500); // Delay before deleting
+        }
+        // Switch to next text
+        else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % textArray.length; // Move to the next string in the array
+          setTimeout(typeWriter, 500); // Delay before typing the next string
+        }
+      }
+
+      // Start the animation when the page loads
+      window.onload = typeWriter;
+    </script>
     
 
 </body>

@@ -77,3 +77,21 @@ ul li a:hover{
     text-align: center;
 
 }
+
+#typing-text{
+    color: blueviolet;
+}
+/* Add this to your existing styles */
+#typing-text::after {
+  content: '|';
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  animation: 
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black } /* You can change the color */
+}
