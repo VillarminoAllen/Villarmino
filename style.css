@@ -19,4 +19,22 @@
     margin: auto;
     padding: 15px 0;
     align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    width: 160px;
+    cursor: pointer;
+    margin-top: -3;
+    margin-left: -2;
+}
+
+ul{
+    margin-top: -4;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
 }
