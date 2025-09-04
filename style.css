@@ -95,3 +95,56 @@ ul li a:hover{
   from, to { border-color: transparent }
   50% { border-color: black } /* You can change the color */
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set up the main container for scroll snapping */
+.main-container {
+    height: 100vh;
+    overflow-y: scroll; /* Allows vertical scrolling */
+    scroll-snap-type: y mandatory; /* "y" for vertical scrolling, "mandatory" forces the snap */
+}
+
+/* Make each section a full page and snap to the start of the section */
+.slides {
+    height: 100vh; /* Make each section fill the entire viewport height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Snap to the top of the section */
+}
+
+/* Add some colors to see the effect more clearly */
+#home {
+    background: #f0f0f0;
+}
+
+#about {
+    background: url(img/image.jpg);
+}
+
+#certificate {
+    background: url(img/image.jpg);
+}
+
+#projects {
+    background: url(img/image.jpg);
+}
+
+#contact {
+    background: url(img/image.jpg);
+}
+
+
+
