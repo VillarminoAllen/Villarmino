@@ -1,6 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    
+}
+body {
+    display: flex;
+    align-items: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  
 }
 
 .main{
@@ -10,12 +18,16 @@
     background-size: cover;
     height: 100vh;
     font-family: sans-serif;
+    display: flex;
 }
 
 .navbar{
     width: 95%;
     height: auto;
     margin-left: 30px;
+    justify-content: center;
+    
+    
 }
 
 .logo{
@@ -24,12 +36,14 @@
     float: left;
     padding-top: .6%;
     cursor: pointer;
+    
 }
 
 .menu{
     width: 1000px;
     float: left;
     height: 70px;
+    display: flex;
 }
 
 ul{
@@ -46,6 +60,7 @@ ul li{
     list-style-type: none;
     margin-left: 60px;
     font-size: 16px;
+    display: flex;
 }
 
 ul li a{
@@ -54,6 +69,7 @@ ul li a{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     transition: .3s ease;
+    display: flex;
 }
 
 ul li a:hover{
@@ -108,43 +124,11 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Set up the main container for scroll snapping */
-.main-container {
-    height: 100vh;
-    overflow-y: scroll; /* Allows vertical scrolling */
-    scroll-snap-type: y mandatory; /* "y" for vertical scrolling, "mandatory" forces the snap */
-}
 
-/* Make each section a full page and snap to the start of the section */
-.slides {
-    height: 100vh; /* Make each section fill the entire viewport height */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start; /* Snap to the top of the section */
-}
 
-/* Add some colors to see the effect more clearly */
-#home {
-    background: #f0f0f0;
-}
 
-#about {
-    background: url(img/image.jpg);
-}
 
-#certificate {
-    background: url(img/image.jpg);
-}
 
-#projects {
-    background: url(img/image.jpg);
-}
-
-#contact {
-    background: url(img/image.jpg);
-}
 
 
 
